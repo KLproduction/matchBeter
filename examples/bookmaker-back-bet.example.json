@@ -1,0 +1,10 @@
+{
+  "bookmaker": "Coral",
+  "sport": "football",
+  "event_name": "Arsenal v Chelsea",
+  "market_name": "Match Odds",
+  "selection_name": "Arsenal",
+  "back_odds": 2.3,
+  "back_stake": 10.0,
+  "event_start_iso": "2026-05-07T19:45:00Z"
+}
