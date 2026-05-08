@@ -12,6 +12,7 @@ class BookmakerBackBet:
     back_odds: float
     back_stake: float
     event_start_iso: Optional[str] = None
+    stake_model: Optional[str] = None
 
 
 @dataclass

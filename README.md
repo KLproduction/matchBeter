@@ -39,3 +39,17 @@ Next build targets:
 5. implement `listMarketBook` lay quote fetcher
 6. implement lay stake/liability calculator
 7. add confidence and ambiguity scoring
+
+Smoke test:
+- `cd workers/automation`
+- `python -m automation --smoke-example ../../examples/bookmaker-back-bet.example.json`
+- optional: add `--offer-id <offer_id>` to pin the target offer
+- optional: add `--stake-model free_bet_stake_not_returned` to override the example
+
+The smoke command inserts a `Bet`, queues a `match_lay` `SyncJob`, claims it immediately, and writes a `LayMatch` row back to Postgres.
+
+MCP server:
+- run: `python -m matchbeter_mcp`
+- requires `DATABASE_URL`
+- exposes tools for offers, bets, sync jobs, and a `smoke_match_lay` action
+- exposes resources at `matchbeter://offers/{offer_id}`, `matchbeter://bets/{bet_id}`, and `matchbeter://jobs/{job_id}`

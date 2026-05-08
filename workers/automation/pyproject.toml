@@ -1,16 +1,11 @@
 [project]
-name = "matchBeter"
+name = "matchbeter-automation-worker"
 version = "0.1.0"
-description = "Bookmaker back-bet to exchange lay-bet matcher"
-readme = "README.md"
+description = "Background worker for matched betting jobs"
 requires-python = ">=3.11"
 dependencies = [
-  "mcp[cli]>=1.0,<2",
   "psycopg[binary]>=3.2,<4",
 ]
-
-[project.scripts]
-matchbeter-mcp = "matchbeter_mcp_impl.server:main"
 
 [build-system]
 requires = ["setuptools>=68", "wheel"]
